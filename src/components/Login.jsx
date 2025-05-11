@@ -6,10 +6,8 @@ import animationData from '../assets/spinnerlottie.json';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import login from '../assets/login.jpg';
-import useDarkMode from 'use-dark-mode';
 
 function Login(){
-    const darkMode = useDarkMode(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [loading,setLoading] = useState(false);
@@ -99,13 +97,6 @@ function Login(){
                             <span className="font-medium"> I T E</span>
                         </h1>
                         <div className='p-10 rounded mt-12'>
-                        <button type="button" onClick={darkMode.disable}>
-                                ☀
-                            </button>
-                            {/* <Toggle checked={darkMode.value} onChange={darkMode.toggle} /> */}
-                            <button type="button" onClick={darkMode.enable}>
-                                ☾
-                            </button>
                             <h2 className='ml-1 text-lg font-medium'>Enter your login credentials</h2>
                             <h3 className='p-2 mt-4 pl-1'>Enter Username</h3>
                             <input
